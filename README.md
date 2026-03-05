@@ -1,5 +1,4 @@
-# DharamSeva - Donate & Make a Difference
-
+#  - Donate & Make a Difference landing page tamplate
 India's Premier Donation Platform - Connecting donors with verified causes across the nation.
 
 ## Description
