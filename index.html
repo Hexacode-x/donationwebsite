@@ -1,0 +1,695 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DharamSeva - Donate & Make a Difference | India's Premier Donation Platform</title>
+    <meta name="description" content="DharamSeva - Secure donation platform for India. Support education, healthcare, rural development, disaster relief & more. Safe payments via UPI, Cards, Net Banking. 100% transparent.">
+    <meta name="keywords" content="donation, donate india, charity, nonprofit, crowdfunding, udonate, giveindia, social cause, indian charities">
+    <meta name="author" content="Hexacode-x">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen">
+    <!-- Background Orbs -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="orb" style="width: 400px; height: 400px; top: 10%; left: -10%; background: #ff6b35;"></div>
+        <div class="orb" style="width: 300px; height: 300px; top: 60%; right: -5%; background: #f7c548; animation-delay: -5s;"></div>
+        <div class="orb" style="width: 350px; height: 350px; bottom: 10%; left: 20%; background: #00875a; animation-delay: -10s;"></div>
+        <div class="orb" style="width: 250px; height: 250px; top: 30%; right: 20%; background: #1a1a2e; animation-delay: -15s;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-strong">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#" class="group">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center shadow-lg group-hover:shadow-orange-500/50 transition-shadow">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                        </div>
+                        <span class="text-2xl font-bold text-white-high">Dharam<span class="gradient-text">Seva</span></span>
+                    </div>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-white-medium hover:text-white-high transition-colors text-sm font-semibold uppercase tracking-wider">Home</a>
+                    <a href="#causes" class="text-white-medium hover:text-white-high transition-colors text-sm font-semibold uppercase tracking-wider">Causes</a>
+                    <a href="#about" class="text-white-medium hover:text-white-high transition-colors text-sm font-semibold uppercase tracking-wider">About Us</a>
+                    <a href="#transparency" class="text-white-medium hover:text-white-high transition-colors text-sm font-semibold uppercase tracking-wider">Transparency</a>
+                </div>
+                
+                <!-- Right Actions -->
+                <div class="flex items-center space-x-4">
+                    <button onclick="openHistory()" class="p-3 glass-light rounded-full hover:bg-white/10 transition-all tooltip-card">
+                        <svg class="w-5 h-5 text-white-high" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </button>
+                    <button onclick="openDonationModal()" class="hidden md:block btn-glow ripple-btn px-6 py-3 rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold text-sm shadow-lg hover:shadow-orange-500/50">
+                        Donate Now
+                    </button>
+                    <button class="md:hidden p-3 glass-light rounded-full">
+                        <svg class="w-6 h-6 text-white-high" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6 min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 float">
+                    <div class="inline-flex items-center space-x-2 px-4 py-2 glass rounded-full text-xs">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        <span class="text-white-high font-medium">🇮🇳 Trusted by 500K+ Donors in India</span>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                        Make A 
+                        <br><span class="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">Real Impact</span>
+                        <br>In India
+                    </h1>
+                    
+                    <p class="text-xl md:text-2xl text-white-medium max-w-xl leading-relaxed">
+                        Join thousands of Indians making a difference. Your donations go directly to education, healthcare, rural development, and disaster relief across the nation.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <button onclick="openDonationModal()" class="btn-glow ripple-btn px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 text-white font-semibold text-lg shadow-xl hover:shadow-orange-500/50 flex items-center space-x-2 group">
+                            <span>Start Donating</span>
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+                        </button>
+                        <button class="btn-glow ripple-btn px-8 py-4 rounded-full glass-strong text-white font-semibold text-lg backdrop-blur-xl">
+                            Become a Volunteer
+                        </button>
+                    </div>
+                    
+                    <!-- Trust Badges -->
+                    <div class="grid grid-cols-3 gap-6 pt-8">
+                        <div class="glass p-6 rounded-2xl text-center card-hover">
+                            <p class="text-3xl font-bold gradient-text">500K+</p>
+                            <p class="text-white-low text-sm uppercase tracking-wider mt-1">Happy Donors</p>
+                        </div>
+                        <div class="glass p-6 rounded-2xl text-center card-hover">
+                            <p class="text-3xl font-bold gradient-text">₹25 Cr+</p>
+                            <p class="text-white-low text-sm uppercase tracking-wider mt-1">Raised</p>
+                        </div>
+                        <div class="glass p-6 rounded-2xl text-center card-hover">
+                            <p class="text-3xl font-bold gradient-text">500+</p>
+                            <p class="text-white-low text-sm uppercase tracking-wider mt-1">NGOs Supported</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Payment Methods -->
+                    <div class="pt-6">
+                        <p class="text-white-low text-sm mb-4 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                            Secure Payments Via:
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <!-- Google Pay -->
+                            <div class="payment-badge glass-light rounded-xl px-4 py-3 flex items-center gap-2 hover:bg-white/20 transition-all cursor-pointer group">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24">
+                                    <path fill="#4285F4" d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14z"/>
+                                    <path fill="#34A853" d="M12 24a7 7 0 0 1-7-7c0-1.4.4-2.7 1.1-3.8L12 24z"/>
+                                    <path fill="#FBBC05" d="M12 24a7 7 0 0 0 7-7c0-1.4-.4-2.7-1.1-3.8L12 24z"/>
+                                </svg>
+                                <span class="text-white font-semibold text-sm group-hover:text-orange-400 transition-colors">GPay</span>
+                            </div>
+
+                            <!-- Paytm -->
+                            <div class="payment-badge glass-light rounded-xl px-4 py-3 flex items-center gap-2 hover:bg-white/20 transition-all cursor-pointer group">
+                                <div class="w-6 h-6 bg-gradient-to-br from-blue-600 to-cyan-400 rounded flex items-center justify-center">
+                                    <span class="text-white text-xs font-bold">P</span>
+                                </div>
+                                <span class="text-white font-semibold text-sm group-hover:text-orange-400 transition-colors">Paytm</span>
+                            </div>
+
+                            <!-- PhonePe -->
+                            <div class="payment-badge glass-light rounded-xl px-4 py-3 flex items-center gap-2 hover:bg-white/20 transition-all cursor-pointer group">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10" fill="#5F259F"/>
+                                    <path fill="#fff" d="M8 12l3 3 5-5"/>
+                                </svg>
+                                <span class="text-white font-semibold text-sm group-hover:text-orange-400 transition-colors">PhonePe</span>
+                            </div>
+
+                            <!-- UPI -->
+                            <div class="payment-badge glass-light rounded-xl px-4 py-3 flex items-center gap-2 hover:bg-white/20 transition-all cursor-pointer group">
+                                <div class="w-6 h-6 bg-gradient-to-br from-orange-500 to-red-500 rounded flex items-center justify-center">
+                                    <span class="text-white text-xs font-bold">₹</span>
+                                </div>
+                                <span class="text-white font-semibold text-sm group-hover:text-orange-400 transition-colors">UPI</span>
+                            </div>
+
+                            <!-- Credit/Debit Card -->
+                            <div class="payment-badge glass-light rounded-xl px-4 py-3 flex items-center gap-2 hover:bg-white/20 transition-all cursor-pointer group">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24">
+                                    <rect fill="#1A1F71" rx="3" width="24" height="16"/>
+                                    <rect fill="#FFD700" rx="1" x="2" y="5" width="4" height="3"/>
+                                    <rect fill="#C0C0C0" x="2" y="10" width="20" height="2"/>
+                                </svg>
+                                <span class="text-white font-semibold text-sm group-hover:text-orange-400 transition-colors">Cards</span>
+                            </div>
+
+                            <!-- Net Banking -->
+                            <div class="payment-badge glass-light rounded-xl px-4 py-3 flex items-center gap-2 hover:bg-white/20 transition-all cursor-pointer group">
+                                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                                </svg>
+                                <span class="text-white font-semibold text-sm group-hover:text-orange-400 transition-colors">Net Banking</span>
+                            </div>
+                        </div>
+
+                        <!-- Trust Badges -->
+                        <div class="flex flex-wrap gap-3 mt-4 pt-4 border-t border-white/10">
+                            <div class="flex items-center gap-2 text-white-low text-xs">
+                                <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                                <span>SSL Secured</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-white-low text-xs">
+                                <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                                <span>256-bit Encrypted</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-white-low text-xs">
+                                <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                                <span>PCI DSS Compliant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hero Image Cards -->
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-6" style="height: 500px;">
+                        <div class="glass-strong rounded-3xl overflow-hidden col-span-2 row-span-2 card-hover relative">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <svg class="w-32 h-32 text-white/30" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            </div>
+                            <div class="absolute bottom-6 left-6 right-6 z-20">
+                                <div class="flex items-center space-x-2 mb-3">
+                                    <span class="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-full text-xs font-bold">URGENT</span>
+                                </div>
+                                <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Disaster Relief Fund</h2>
+                                <p class="text-white-medium line-clamp-2">Support flood victims in Assam & Odisha.</p>
+                                <div class="mt-4">
+                                    <div class="flex justify-between text-white-medium text-sm mb-2">
+                                        <span>₹45 Lakhs raised of ₹60 Lakhs</span>
+                                        <span>75%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-700 rounded-full h-3">
+                                        <div class="progress-bar" style="width: 75%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-strong rounded-3xl overflow-hidden card-hover group">
+                            <div class="p-4 flex flex-col h-full justify-end">
+                                <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center mb-3">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                </div>
+                                <h3 class="font-bold text-white mb-1">Education for All</h3>
+                                <p class="text-white-medium text-xs">Provide books & tuition</p>
+                                <p class="text-orange-400 font-bold mt-2">₹12L+ Raised</p>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-strong rounded-3xl overflow-hidden card-hover group">
+                            <div class="p-4 flex flex-col h-full justify-end">
+                                <div class="w-12 h-12 rounded-full bg-red-500 flex items-center justify-center mb-3">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                                </div>
+                                <h3 class="font-bold text-white mb-1">Healthcare Access</h3>
+                                <p class="text-white-medium text-xs">Free medical camps</p>
+                                <p class="text-orange-400 font-bold mt-2">₹8.5L+ Raised</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Causes Section -->
+    <section id="causes" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-white-low uppercase tracking-widest mb-2 text-sm">Make A Difference Today</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-white-high">Top Causes We Support</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Education -->
+                <div class="glass-strong rounded-3xl overflow-hidden card-hover cursor-pointer group">
+                    <div class="h-40 bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-white-high text-xl mb-2 group-hover:text-orange-400 transition-colors">Education for All</h3>
+                        <p class="text-white-medium text-sm mb-4">Providing quality education to underprivileged children across rural India.</p>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-white-medium text-xs mb-2">
+                                <span>₹12 Lakhs raised</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="progress-bar" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <button onclick="setCause('education'); openDonationModal();" class="w-full btn-glow ripple-btn py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold text-sm">Donate Now</button>
+                    </div>
+                </div>
+                
+                <!-- Healthcare -->
+                <div class="glass-strong rounded-3xl overflow-hidden card-hover cursor-pointer group">
+                    <div class="h-40 bg-gradient-to-br from-red-500 to-pink-500 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-white-high text-xl mb-2 group-hover:text-red-400 transition-colors">Healthcare Access</h3>
+                        <p class="text-white-medium text-sm mb-4">Organizing free medical camps and providing medicines to rural areas.</p>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-white-medium text-xs mb-2">
+                                <span>₹8.5 Lakhs raised</span>
+                                <span>57%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="progress-bar" style="width: 57%"></div>
+                            </div>
+                        </div>
+                        <button onclick="setCause('healthcare'); openDonationModal();" class="w-full btn-glow ripple-btn py-3 rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold text-sm">Donate Now</button>
+                    </div>
+                </div>
+                
+                <!-- Rural Development -->
+                <div class="glass-strong rounded-3xl overflow-hidden card-hover cursor-pointer group">
+                    <div class="h-40 bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064"/></svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-white-high text-xl mb-2 group-hover:text-green-400 transition-colors">Rural Development</h3>
+                        <p class="text-white-medium text-sm mb-4">Building schools, clean water access, and sanitation facilities.</p>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-white-medium text-xs mb-2">
+                                <span>₹18 Lakhs raised</span>
+                                <span>72%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="progress-bar" style="width: 72%"></div>
+                            </div>
+                        </div>
+                        <button onclick="setCause('rural'); openDonationModal();" class="w-full btn-glow ripple-btn py-3 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold text-sm">Donate Now</button>
+                    </div>
+                </div>
+                
+                <!-- Disaster Relief -->
+                <div class="glass-strong rounded-3xl overflow-hidden card-hover cursor-pointer group">
+                    <div class="h-40 bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-white-high text-xl mb-2 group-hover:text-orange-400 transition-colors">Disaster Relief</h3>
+                        <p class="text-white-medium text-sm mb-4">Emergency aid for flood, earthquake, and cyclone victims.</p>
+                        <div class="mb-4">
+                            <div class="flex justify-between text-white-medium text-xs mb-2">
+                                <span>₹25 Lakhs raised</span>
+                                <span>83%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="progress-bar" style="width: 83%"></div>
+                            </div>
+                        </div>
+                        <button onclick="setCause('disaster'); openDonationModal();" class="w-full btn-glow ripple-btn py-3 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold text-sm">Donate Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-white-low uppercase tracking-widest mb-2 text-sm">Simple & Transparent</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-white-high">How DharamSeva Works</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="glass p-8 rounded-2xl text-center card-hover">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-white">1</span>
+                    </div>
+                    <h3 class="font-bold text-white-high text-lg mb-2">Choose Cause</h3>
+                    <p class="text-white-medium text-sm">Select from verified causes that matter to you</p>
+                </div>
+                
+                <div class="glass p-8 rounded-2xl text-center card-hover">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-white">2</span>
+                    </div>
+                    <h3 class="font-bold text-white-high text-lg mb-2">Enter Amount</h3>
+                    <p class="text-white-medium text-sm">Choose any amount - even ₹10 makes a difference!</p>
+                </div>
+                
+                <div class="glass p-8 rounded-2xl text-center card-hover">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-white">3</span>
+                    </div>
+                    <h3 class="font-bold text-white-high text-lg mb-2">Secure Payment</h3>
+                    <p class="text-white-medium text-sm">Pay safely via UPI, Cards, or Net Banking</p>
+                </div>
+                
+                <div class="glass p-8 rounded-2xl text-center card-hover">
+                    <div class="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-white">4</span>
+                    </div>
+                    <h3 class="font-bold text-white-high text-lg mb-2">Get Updates</h3>
+                    <p class="text-white-medium text-sm">Track your donation impact with real-time reports</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="glass-strong rounded-3xl p-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <p class="text-4xl font-bold gradient-text mb-2">500K+</p>
+                        <p class="text-white-medium text-sm uppercase tracking-wider">Active Donors</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold gradient-text mb-2">₹25 Cr+</p>
+                        <p class="text-white-medium text-sm uppercase tracking-wider">Total Funds Raised</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold gradient-text mb-2">500+</p>
+                        <p class="text-white-medium text-sm uppercase tracking-wider">Partner NGOs</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold gradient-text mb-2">250K+</p>
+                        <p class="text-white-medium text-sm uppercase tracking-wider">Lives Impacted</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass-strong rounded-3xl p-12 text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mb-6">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <h2 class="text-3xl font-bold text-white-high mb-4">Stay Updated</h2>
+                <p class="text-white-medium text-lg max-w-xl mx-auto mb-8">Get updates on causes, success stories, and exclusive donor events delivered to your inbox.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" id="newsletterEmail" placeholder="your@email.com" class="flex-1 glass-light rounded-full px-6 py-4 text-white placeholder-white/50 focus:outline-none focus:bg-white/20 transition-all">
+                    <button onclick="subscribeNewsletter()" class="btn-glow ripple-btn px-8 py-4 rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white font-semibold shadow-lg whitespace-nowrap">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 px-6 border-t border-white/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-yellow-500 flex items-center justify-center">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                        </div>
+                        <span class="text-2xl font-bold text-white-high">Dharam<span class="gradient-text">Seva</span></span>
+                    </div>
+                    <p class="text-white-medium text-sm leading-relaxed">India's most trusted donation platform. Connecting donors with verified causes since 2020.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="https://github.com/Hexacode-x" class="glass-light p-3 rounded-full hover:bg-white/20 transition-all" title="GitHub">
+                            <svg class="w-5 h-5 text-white-high" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-white-high mb-4 uppercase text-sm tracking-wider">Quick Links</h4>
+                    <ul class="space-y-3 text-white-medium text-sm">
+                        <li><a href="#" class="hover:text-white-high transition-colors">All Causes</a></li>
+                        <li><a href="#" class="hover:text-white-high transition-colors">Monthly Giving</a></li>
+                        <li><a href="#" class="hover:text-white-high transition-colors">Corporate CSR</a></li>
+                        <li><a href="#" class="hover:text-white-high transition-colors">Volunteer</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-white-high mb-4 uppercase text-sm tracking-wider">Support</h4>
+                    <ul class="space-y-3 text-white-medium text-sm">
+                        <li><a href="#" class="hover:text-white-high transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white-high transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-white-high transition-colors">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white-high transition-colors">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-white-high mb-4 uppercase text-sm tracking-wider">Legal</h4>
+                    <ul class="space-y-3 text-white-medium text-sm">
+                        <li><a href="#" class="hover:text-white-high transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white-high transition-colors">80G Certificate</a></li>
+                        <li><a href="#" class="hover:text-white-high transition-colors">Annual Reports</a></li>
+                        <li><a href="#" class="hover:text-white-high transition-colors">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 mt-12 pt-8 text-center text-white-low text-sm">
+                <p>&copy; 2025 DharamSeva Foundation. All rights reserved. Designed with ❤️ by <a href="https://github.com/Hexacode-x" class="text-orange-400 hover:underline">Hexacode-x</a></p>
+                <p class="mt-2 text-xs">Licensed under Indian Charity Act • Registration No: DHC/IND/2020/12345</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Donation Modal -->
+    <div id="modalOverlay" class="modal-overlay" onclick="closeDonationModal()"></div>
+    <div id="donationModal" class="modal-slide">
+        <div class="p-8">
+            <!-- Close Button -->
+            <button onclick="closeDonationModal()" class="absolute top-6 right-6 p-3 glass-light rounded-full hover:bg-white/10 transition-all">
+                <svg class="w-6 h-6 text-white-high" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            
+            <h2 class="text-3xl font-bold text-white-high mb-2">Make A Donation</h2>
+            <p class="text-white-medium mb-8">Your contribution will make a real difference</p>
+            
+            <!-- Selected Cause Display -->
+            <div id="selectedCauseDisplay" class="glass-light rounded-xl p-4 mb-6">
+                <span class="text-orange-400 text-sm font-semibold">General Donation</span>
+                <p class="text-white-medium text-sm mt-1">Your donation will support our best-performing causes</p>
+            </div>
+            
+            <!-- Amount Selection -->
+            <h3 class="text-white-medium text-sm uppercase tracking-wider mb-4">Choose Amount</h3>
+            <div class="grid grid-cols-3 gap-3 mb-6" id="amountButtons">
+                <button class="amount-btn glass-light rounded-xl p-4 text-center font-semibold text-white-medium border-2 border-transparent hover:border-orange-500 transition-all" onclick="selectAmount(100)">₹100</button>
+                <button class="amount-btn glass-light rounded-xl p-4 text-center font-semibold text-white-medium border-2 border-transparent hover:border-orange-500 transition-all selected" onclick="selectAmount(200)">₹200</button>
+                <button class="amount-btn glass-light rounded-xl p-4 text-center font-semibold text-white-medium border-2 border-transparent hover:border-orange-500 transition-all" onclick="selectAmount(500)">₹500</button>
+                <button class="amount-btn glass-light rounded-xl p-4 text-center font-semibold text-white-medium border-2 border-transparent hover:border-orange-500 transition-all" onclick="selectAmount(1000)">₹1000</button>
+                <button class="amount-btn glass-light rounded-xl p-4 text-center font-semibold text-white-medium border-2 border-transparent hover:border-orange-500 transition-all" onclick="selectAmount(2000)">₹2000</button>
+                <div class="relative">
+                    <input type="number" id="customAmount" placeholder="Other" class="w-full glass-light rounded-xl px-4 py-4 text-white placeholder-white/50 focus:outline-none focus:border-orange-500 text-center font-semibold" oninput="this.classList.add('selected')">
+                </div>
+            </div>
+            
+            <!-- Donation Frequency -->
+            <h3 class="text-white-medium text-sm uppercase tracking-wider mb-4">Frequency</h3>
+            <div class="grid grid-cols-2 gap-3 mb-6">
+                <label class="glass-light rounded-xl p-4 cursor-pointer transition-all hover:border-orange-500 border-2 border-transparent">
+                    <input type="radio" name="frequency" value="onetime" class="custom-checkbox checked" checked>
+                    <span class="text-white-medium ml-2">One Time</span>
+                </label>
+                <label class="glass-light rounded-xl p-4 cursor-pointer transition-all hover:border-orange-500 border-2 border-transparent">
+                    <input type="radio" name="frequency" value="monthly" class="custom-checkbox">
+                    <span class="text-white-medium ml-2">Monthly</span>
+                </label>
+            </div>
+            
+            <!-- Payment Method -->
+            <h3 class="text-white-medium text-sm uppercase tracking-wider mb-4">Payment Method</h3>
+            <div class="space-y-3 mb-6">
+                <label class="glass-light rounded-xl p-4 cursor-pointer transition-all hover:border-orange-500 border-2 border-transparent flex items-center">
+                    <input type="radio" name="payment" value="upi" class="custom-checkbox checked" checked>
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Crect fill='%231A1F71' rx='6' width='100' height='40'/%3E%3Ctext x='35' y='28' font-size='22' fill='white' font-weight='bold'%3E₹UPI%3C/text%3E%3C/svg%3E" alt="UPI" class="h-8 mr-3">
+                    <span class="text-white-medium ml-2">UPI / Wallet</span>
+                </label>
+                <label class="glass-light rounded-xl p-4 cursor-pointer transition-all hover:border-orange-500 border-2 border-transparent flex items-center">
+                    <input type="radio" name="payment" value="card" class="custom-checkbox">
+                    <svg class="w-8 h-5 mr-3" fill="currentColor" viewBox="0 0 40 25"><rect fill="#fff" rx="3" width="40" height="25"/><rect fill="#0066cc" rx="2" width="12" height="12" y="6"/><rect fill="#ff6600" rx="2" width="12" height="12" y="6" x="26"/><circle fill="#ff3300" cx="10" cy="13" r="4"/><circle fill="#ff9900" cx="30" cy="13" r="4"/></svg>
+                    <span class="text-white-medium ml-2">Credit/Debit Card</span>
+                </label>
+                <label class="glass-light rounded-xl p-4 cursor-pointer transition-all hover:border-orange-500 border-2 border-transparent flex items-center">
+                    <input type="radio" name="payment" value="netbanking" class="custom-checkbox">
+                    <svg class="w-8 h-8 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+                    <span class="text-white-medium ml-2">Net Banking</span>
+                </label>
+            </div>
+            
+            <!-- Donor Details -->
+            <h3 class="text-white-medium text-sm uppercase tracking-wider mb-4">Your Details</h3>
+            <div class="space-y-3 mb-6">
+                <input type="text" id="donorName" placeholder="Full Name" class="w-full glass-light rounded-xl px-4 py-4 text-white placeholder-white/50 focus:outline-none focus:border-orange-500">
+                <input type="email" id="donorEmail" placeholder="Email Address" class="w-full glass-light rounded-xl px-4 py-4 text-white placeholder-white/50 focus:outline-none focus:border-orange-500">
+                <input type="tel" id="donorPhone" placeholder="Mobile Number" class="w-full glass-light rounded-xl px-4 py-4 text-white placeholder-white/50 focus:outline-none focus:border-orange-500">
+            </div>
+            
+            <!-- Tax Benefit Info -->
+            <div class="glass-light rounded-xl p-4 mb-6 border-l-4 border-green-500">
+                <div class="flex items-start space-x-3">
+                    <svg class="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <div>
+                        <p class="text-white-high font-semibold text-sm">Tax Benefits Available</p>
+                        <p class="text-white-medium text-xs mt-1">Your donation is eligible for 50% tax deduction under Section 80G of Income Tax Act</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Total Summary -->
+            <div class="glass-strong rounded-xl p-4 mb-6">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-white-medium">Total Amount</span>
+                    <span class="text-2xl font-bold text-orange-400" id="totalAmount">₹200</span>
+                </div>
+                <p class="text-white-low text-xs">No processing fee. 100% goes to the cause.</p>
+            </div>
+            
+            <!-- Donate Button -->
+            <button onclick="processDonation()" id="donateBtn" class="w-full btn-glow ripple-btn py-4 rounded-full bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 text-white font-bold text-lg shadow-xl hover:shadow-orange-500/50">
+                Proceed to Pay
+            </button>
+            
+            <p class="text-white-low text-xs text-center mt-4 flex items-center justify-center space-x-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                <span>SSL Secured & Encrypted Payment</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal-slide">
+        <div class="p-8 min-h-screen flex flex-col items-center justify-center">
+            <div class="w-24 h-24 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mb-6 success-pop">
+                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h2 class="text-3xl font-bold text-white mb-4">Thank You!</h2>
+            <p class="text-white-medium text-center mb-8">Your donation has been successfully processed. You're making a difference!</p>
+            
+            <div class="glass-strong rounded-2xl p-6 w-full mb-8">
+                <h3 class="text-white-medium text-sm uppercase tracking-wider mb-4">Transaction Details</h3>
+                <div class="space-y-3">
+                    <div class="flex justify-between">
+                        <span class="text-white-medium">Transaction ID</span>
+                        <span class="text-white-high font-mono" id="transactionId">DHAR-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-white-medium">Amount</span>
+                        <span class="text-white-high font-bold" id="receiptAmount">₹200</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-white-medium">Date</span>
+                        <span class="text-white-high" id="receiptDate"></span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-white-medium">Status</span>
+                        <span class="text-green-400 font-semibold">✓ Completed</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="space-y-3 w-full">
+                <button onclick="downloadReceipt()" class="w-full glass-light rounded-xl py-4 text-white-medium hover:bg-white/10 transition-all">
+                    📥 Download Receipt (PDF)
+                </button>
+                <button onclick="closeSuccessModal()" class="w-full glass-light rounded-xl py-4 text-white-medium hover:bg-white/10 transition-all">
+                    ✕ Back to Home
+                </button>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <p class="text-white-low text-sm">An email receipt has been sent to your registered email address</p>
+                <p class="text-white-low text-xs mt-2">For 80G Certificate, visit your donor portal</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- History Panel -->
+    <div id="historyPanel" class="modal-slide">
+        <div class="p-8">
+            <button onclick="closeHistory()" class="absolute top-6 right-6 p-3 glass-light rounded-full hover:bg-white/10 transition-all">
+                <svg class="w-6 h-6 text-white-high" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            
+            <h2 class="text-2xl font-bold text-white-high mb-6">Donation History</h2>
+            
+            <div id="historyList" class="space-y-4">
+                <div class="glass-light rounded-xl p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <p class="text-white-high font-semibold">Education for All</p>
+                            <p class="text-white-medium text-xs">Dec 15, 2024</p>
+                        </div>
+                        <span class="text-green-400 font-semibold">✓ Paid</span>
+                    </div>
+                    <div class="flex justify-between items-center pt-3 border-t border-white/10">
+                        <span class="text-white-medium text-sm">₹500</span>
+                        <button class="text-orange-400 text-sm hover:underline">Download Receipt</button>
+                    </div>
+                </div>
+                <div class="glass-light rounded-xl p-4">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <p class="text-white-high font-semibold">Healthcare Access</p>
+                            <p class="text-white-medium text-xs">Nov 28, 2024</p>
+                        </div>
+                        <span class="text-green-400 font-semibold">✓ Paid</span>
+                    </div>
+                    <div class="flex justify-between items-center pt-3 border-t border-white/10">
+                        <span class="text-white-medium text-sm">₹1,000</span>
+                        <button class="text-orange-400 text-sm hover:underline">Download Receipt</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center text-white-low text-sm">
+                <p>Total Donated: <span class="text-white-high font-bold">₹1,500</span></p>
+                <p class="text-xs mt-1">You've made a positive impact! Keep it up! 💚</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast glass-strong">
+        <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <div>
+            <p id="toastTitle" class="text-white-high font-semibold"></p>
+            <p id="toastMessage" class="text-white-medium text-sm"></p>
+        </div>
+        <button onclick="hideToast()" class="ml-auto text-white-medium hover:text-white">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
