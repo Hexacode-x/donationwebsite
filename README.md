@@ -166,7 +166,7 @@ async function processDonation() {
 **Hexacode-x**
 
 - GitHub: [@Hexacode-x](https://github.com/Hexacode-x)
-- Project: DharamSeva Foundation
+- Project: Donation website Tamplate
 
 ## License
 
@@ -175,9 +175,8 @@ This project is created for educational and demonstration purposes.
 ## Acknowledgments
 
 - Designed with ❤️ for India
-- Supporting verified NGOs across the nation
-- Licensed under Indian Charity Act
+
 
 ---
 
-&copy; 2025 DharamSeva Foundation. All rights reserved.
+&copy; 2026 Hexacode . All rights reserved.
